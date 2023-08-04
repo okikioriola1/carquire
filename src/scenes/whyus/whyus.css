@@ -1,0 +1,57 @@
+.whyus-header h4{
+    color: #574f4f;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+    padding-top:2rem;
+    text-transform: uppercase;
+
+}
+
+.whyus-header h2{
+    color: black;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 74px;
+    
+}
+
+.whyus-points-content h2{
+    color: black;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+
+}
+
+.whyus-points-content p{
+    color: #574f4f;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+    padding-top:0.2rem;
+   
+
+}
+.whyus-icon{
+    width: 50px;
+    height: 50px;
+    background-color:#f5f5f5;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.whyus-icon svg{
+
+    color: #00AFF5;
+}

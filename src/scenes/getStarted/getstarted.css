@@ -1,0 +1,20 @@
+.get-started-text h2{
+    color: #00AFF5;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 74px;
+}
+
+.get-started-form-container h2{
+
+    color: #00AFF5;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 34px;
+    text-transform: uppercase;
+
+}
