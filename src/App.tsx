@@ -1,4 +1,5 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
+import * as React from 'react'
 
 import './App.css'
 import Footer from './scenes/footer/index'
@@ -26,7 +27,7 @@ function App() {
             <Hero />
             <HowItWorks/>
             <WhyUs />
-            <GetStarted setSelectedPage={setSelectedPage}/>
+            <GetStarted />
             <Footer />
        </div>
     </>

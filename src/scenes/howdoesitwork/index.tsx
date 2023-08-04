@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import './how.css'
 import {BsFillCarFrontFill, BsCalendarDayFill, BsCheck2All} from 'react-icons/bs'
 import {MdLocationOn} from 'react-icons/md'

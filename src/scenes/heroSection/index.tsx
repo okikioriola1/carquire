@@ -1,5 +1,5 @@
 import useMediaQuery from '../../hooks/useMediaQuery';
-import React from 'react'
+import * as React from 'react'
 import Car1 from '../../assets/pngs/car-img1.png'
 import './hero.css'
 

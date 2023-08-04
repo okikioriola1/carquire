@@ -1,14 +1,14 @@
-import React from 'react'
+import * as React from 'react'
 import './getstarted.css'
 import GetStartedImage from '../../assets/pngs/white-car.png'
 import { useForm } from "react-hook-form";
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-interface Props  {
-    setSelectedPage: (value: SelectedPage) => void;
-  };
+// interface Props  {
+//     setSelectedPage: (value: SelectedPage) => void;
+//   };
 
-const GetStarted = ({setSelectedPage}) => {
+const GetStarted= () => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     const inputStyles = `mb-5 w-3/4 flex justify-center items-center m-auto border border-2 border-gray-300 rounded-lg px-5 py-3 placeholder-grey`;
     const {
@@ -80,8 +80,8 @@ const GetStarted = ({setSelectedPage}) => {
               />
               {errors.phone && (
                 <p className="mt-1 text-red">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
+                  {errors.phone.type === "required" && "This field is required."}
+                  {errors.phone.type === "maxLength" &&
                     "Max Length is 100 characters "}
                 </p>
               )}
@@ -97,8 +97,8 @@ const GetStarted = ({setSelectedPage}) => {
               />
               {errors.location && (
                 <p className="mt-1 text-red">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
+                  {errors.location.type === "required" && "This field is required."}
+                  {errors.location.type === "maxLength" &&
                     "Max Length is 100 characters "}
                 </p>
               )}
@@ -114,8 +114,8 @@ const GetStarted = ({setSelectedPage}) => {
               />
               {errors.car && (
                 <p className="mt-1 text-red">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
+                  {errors.car.type === "required" && "This field is required."}
+                  {errors.car.type === "maxLength" &&
                     "Max Length is 100 characters "}
                 </p>
               )}

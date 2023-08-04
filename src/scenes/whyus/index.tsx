@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 import useMediaQuery from '../../hooks/useMediaQuery';
 
@@ -11,10 +11,7 @@ interface WhyUsPointsProps {
     title?: string;
     description?: string;
 }
-interface Props{
-    setSelectedPage: (value: SelectedPage) => void;
 
-}
 
 const WhyUsPointers: Array<WhyUsPointsProps> = [
     {
@@ -42,7 +39,7 @@ const WhyUsPointers: Array<WhyUsPointsProps> = [
 
 
 
-const WhyUs: React.FC<Props> = ({setSelectedPage}) => {
+const WhyUs: React.FC<Props> = () => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
     <section id="whychooseus" className='py-14 whyus'>

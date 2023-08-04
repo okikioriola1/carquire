@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Facebook from "../../assets/svgs/facebook.svg";
 import Instagram from "../../assets/svgs/instagram.svg";
 import Twitter from "../../assets/svgs/twitter.svg";

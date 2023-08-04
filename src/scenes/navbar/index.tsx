@@ -1,10 +1,9 @@
 
-import React from 'react'
+import * as React from 'react'
 import { useState } from "react"
 import {Bars3BottomRightIcon, XMarkIcon} from "@heroicons/react/24/solid"
 
-// import Logo from "@/assets/Logo.png"
-import Link from "./NavLink"
+
 import { SelectedPage } from "@/shared/types"
 import useMediaQuery from '../../hooks/useMediaQuery'
 import NavLink from './NavLink'
