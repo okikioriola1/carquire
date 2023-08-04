@@ -7,9 +7,9 @@ import './whyus.css'
 import WhyUsPoints from './WhyUsPoints';
 
 interface WhyUsPointsProps {
-    id?: Number;
-    title?: string;
-    description?: string;
+    id: number;
+    title: string;
+    description: string;
 }
 
 
@@ -39,7 +39,7 @@ const WhyUsPointers: Array<WhyUsPointsProps> = [
 
 
 
-const WhyUs: React.FC<Props> = () => {
+const WhyUs = () => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
     <section id="whychooseus" className='py-14 whyus'>

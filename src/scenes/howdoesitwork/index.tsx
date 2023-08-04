@@ -10,7 +10,7 @@ interface HowItWorksCardProps{
     icon: JSX.Element;
     title: string;
     description: string;
-    id: Number;
+    id: number;
 }
 
 
