@@ -49,7 +49,7 @@ const GetStarted= () => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-            //   action="https://formsubmit.co/38561154e40bcf2daceba311d90b4b24"
+             action="https://formsubmit.co/31351a9fa68096d6191cf49cbc20d632"
               method="POST"
             >
               <input
