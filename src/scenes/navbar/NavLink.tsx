@@ -15,8 +15,8 @@ const NavLink = ({page, selectedPage, setSelectedPage
     const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage
 
   return (
-   <AnchorLink href={`#${lowerCasePage}`} onClick={()=>setSelectedPage(lowerCasePage)} className={`${selectedPage === lowerCasePage ? "text-primary-500" : "" }
-   transition duration-500 hover:text-primary-300
+   <AnchorLink href={`#${lowerCasePage}`} onClick={()=>setSelectedPage(lowerCasePage)} className={`${selectedPage === lowerCasePage ? "text-[#00AFF5]" : "" }
+   transition duration-500 hover:text-sky-500
    
    `}>
     {page}

@@ -2,6 +2,7 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import * as React from 'react'
 import Car1 from '../../assets/pngs/car-img1.png'
 import './hero.css'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
@@ -13,6 +14,11 @@ const Hero = () => {
             <div className='text'>
                 <h4>Find, Book and Own any Car of your choice in <span className='blue-color'>Easy</span> steps</h4>
                 <p> Get a car whenever you need it and for as long as you need it</p>
+            </div>
+            <div className='flex gap-10 mt-8'>
+
+            <Link to="/rent" className='home-btn'>Own A Car</Link>
+            <Link to="/hire" className='home-btn'>Drop A Car</Link>
             </div>
 
         </div>

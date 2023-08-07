@@ -2,13 +2,13 @@ import { useState } from 'react'
 import * as React from 'react'
 
 import './App.css'
-import Footer from './scenes/footer/index'
-import GetStarted from './scenes/getStarted/index'
-import Hero from './scenes/heroSection/index'
-import HowItWorks from './scenes/howdoesitwork/index'
-import Navbar from './scenes/navbar/index'
-import WhyUs from './scenes/whyus/index'
+
 import { SelectedPage } from './shared/types'
+import Home from './scenes/HomePage/index'
+import { Route, Routes } from 'react-router-dom'
+import Renter from './scenes/renter/index'
+import Navbar from './scenes/navbar/index'
+import Hire from './scenes/hirer/index'
 
 function App() {
 
@@ -24,11 +24,14 @@ function App() {
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
             />
-            <Hero />
-            <HowItWorks/>
-            <WhyUs />
-            <GetStarted />
-            <Footer />
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/rent" element={<Renter/>} />
+            <Route path="/hire" element={<Hire/>} />
+
+          </Routes>
+         
+
        </div>
     </>
   )

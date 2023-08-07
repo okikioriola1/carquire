@@ -7,6 +7,7 @@ import {Bars3BottomRightIcon, XMarkIcon} from "@heroicons/react/24/solid"
 import { SelectedPage } from "@/shared/types"
 import useMediaQuery from '../../hooks/useMediaQuery'
 import NavLink from './NavLink'
+import { Link } from 'react-router-dom'
 // import ActionButton from "@/shared/ActionButton"
 
 type Props = {
@@ -31,7 +32,7 @@ const Navbar = ({ selectedPage, setSelectedPage}: Props) => {
         <div className={`${navbarBackground} ${flexBetween} z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-5/6`}>
             <div className={`${flexBetween} w-full gap-16`}>
-               <h2>Carquire</h2>
+             <Link to="/"> <h2>Carquire</h2></Link> 
 
 
                 {isAboveMediumScreens ? <div className={`${flexBetween} w-full`}>

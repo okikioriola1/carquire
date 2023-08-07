@@ -21,3 +21,16 @@
     line-height: 28px; 
     padding-top:2rem;
 }
+
+.home-btn{
+    width: 200px;
+    display: block;
+    text-align: center;
+    border: transparent;
+    border-radius: 50px;
+    background-color: #00AFF5;
+    padding:1rem;
+    color: #fff;
+    cursor: pointer;
+
+}

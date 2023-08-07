@@ -1,15 +1,6 @@
 import * as React from 'react'
-import './getstarted.css'
-import GetStartedImage from '../../assets/pngs/white-car.png'
 import { useForm } from "react-hook-form";
-import useMediaQuery from '../../hooks/useMediaQuery';
-
-// interface Props  {
-//     setSelectedPage: (value: SelectedPage) => void;
-//   };
-
-const GetStarted= () => {
-    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+const Renter = () => {
     const inputStyles = `mb-5 w-3/4 flex justify-center items-center m-auto border border-2 border-gray-300 rounded-lg px-5 py-3 placeholder-grey`;
     const {
         register,
@@ -22,28 +13,12 @@ const GetStarted= () => {
           e.preventDefault();
         }
       };
+
   return (
-    <section id="getstarted" className="getstarted mt-12 bg-[#F5F5F5]">
-
-        <div className='getstarted-wrapper w-11/12 m-auto  md:flex md:flex-row justify-center pt-5 pb-32'>
-            <div className='get-started-content flex flex-col justify-center'>
-                <div className='get-started-text py-10 md:py-8'>
-                    <h2>Find a Great Price on the Vehicle You Want</h2>
-                    <p>Looking for luxury, economy, or a family vehicle you can use for a short period? Get the best prices at Carquire.</p>
-
-                </div>
-               { isAboveMediumScreens&& (
-
-                   <div className='get-started-image'>
-                    <img src={GetStartedImage} className="w-[400px]" alt="get-started" />
-                </div>
-                    )}
-
-            </div>
-
-            <div className='get-started-form-wrapper basis-3/5 w-full'>
-                <div className='get-started-form-container bg-white pt-12 h-full w-4/5 m-auto'>
-                    <h2 className='text-center pb-12'>Search Vehicles</h2>
+    <div>
+    <div className='renter-form-wrapper basis-3/5 w-full'>
+    <div className='renter-form-container bg-white pt-12 h-full w-4/5 m-auto'>
+                    <h2 className='text-center pb-12'>Fill out the form below to get details on renting a vehicle of your choice.</h2>
 
                
             <form
@@ -119,6 +94,22 @@ const GetStarted= () => {
                     "Max Length is 100 characters "}
                 </p>
               )}
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="DURATION OF RENT"
+                {...register("duration", {
+                  required: true,
+                  maxLength: 100,
+                })}
+              />
+              {errors.duration && (
+                <p className="ml-20 -mt-4 mb-4 text-red-500">
+                  {errors.duration.type === "required" && "This field is required."}
+                  {errors.duration.type === "maxLength" &&
+                    "Max Length is 100 characters "}
+                </p>
+              )}
 
               <input
                 className={inputStyles}
@@ -166,14 +157,8 @@ const GetStarted= () => {
 
             </div>
             </div>
-
-
-        </div>
-
-
-
-    </section>
+    </div>
   )
 }
 
-export default GetStarted
+export default Renter
