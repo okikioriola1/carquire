@@ -7,7 +7,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-	const [selectedPage, setSelectedPage] = React.useState("");
+	//const [selectedPage, setSelectedPage] = React.useState("");
 
 	return (
 		<section id="home" className="py-14 bg-[#F5F5F5]">

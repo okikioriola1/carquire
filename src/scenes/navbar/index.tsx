@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";

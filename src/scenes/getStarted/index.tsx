@@ -35,18 +35,7 @@ const WhyUsPointers: Array<WhyUsPointsProps> = [
 
 const GetStarted = () => {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-	const inputStyles = `mb-5 w-3/4 flex justify-center items-center m-auto border border-2 border-gray-300 rounded-lg px-5 py-3 placeholder-grey`;
-	const {
-		register,
-		trigger,
-		formState: { errors },
-	} = useForm();
-	const onSubmit = async (e: any) => {
-		const isValid = await trigger();
-		if (!isValid) {
-			e.preventDefault();
-		}
-	};
+
 	return (
 		<section id="getstarted" className="getstarted mt-12 bg-[#F5F5F5]">
 			<div className="getstarted-wrapper justify-between w-4/5 m-auto md:flex md:flex-row pt-5 pb-32">
