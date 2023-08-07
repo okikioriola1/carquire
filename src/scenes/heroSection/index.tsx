@@ -38,7 +38,7 @@ const Hero = () => {
 
 						<AnchorLink
 							href={`#getstarted`}
-							onClick={() => setSelectedPage("getstarted")}
+							
 							className={`transition duration-500 earn-btn btn-red`}
 						>
 							Earn with RoRo

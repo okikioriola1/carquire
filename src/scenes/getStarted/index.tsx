@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./getstarted.css";
 import GetStartedImage from "../../assets/pngs/white-car.png";
-import { useForm } from "react-hook-form";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
 import WhyUsPoints from "../whyus/WhyUsPoints";
 import { Link } from "react-router-dom";
