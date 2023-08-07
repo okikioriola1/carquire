@@ -1,179 +1,93 @@
-import * as React from 'react'
-import './getstarted.css'
-import GetStartedImage from '../../assets/pngs/white-car.png'
+import * as React from "react";
+import "./getstarted.css";
+import GetStartedImage from "../../assets/pngs/white-car.png";
 import { useForm } from "react-hook-form";
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from "../../hooks/useMediaQuery";
+import WhyUsPoints from "../whyus/WhyUsPoints";
+import { Link } from "react-router-dom";
 
-// interface Props  {
-//     setSelectedPage: (value: SelectedPage) => void;
-//   };
-
-const GetStarted= () => {
-    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-    const inputStyles = `mb-5 w-3/4 flex justify-center items-center m-auto border border-2 border-gray-300 rounded-lg px-5 py-3 placeholder-grey`;
-    const {
-        register,
-        trigger,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = async (e: any) => {
-        const isValid = await trigger();
-        if (!isValid) {
-          e.preventDefault();
-        }
-      };
-  return (
-    <section id="getstarted" className="getstarted mt-12 bg-[#F5F5F5]">
-
-        <div className='getstarted-wrapper w-11/12 m-auto  md:flex md:flex-row justify-center pt-5 pb-32'>
-            <div className='get-started-content flex flex-col justify-center'>
-                <div className='get-started-text py-10 md:py-8'>
-                    <h2>Find a Great Price on the Vehicle You Want</h2>
-                    <p>Looking for luxury, economy, or a family vehicle you can use for a short period? Get the best prices at Carquire.</p>
-
-                </div>
-               { isAboveMediumScreens&& (
-
-                   <div className='get-started-image'>
-                    <img src={GetStartedImage} className="w-[400px]" alt="get-started" />
-                </div>
-                    )}
-
-            </div>
-
-            <div className='get-started-form-wrapper basis-3/5 w-full'>
-                <div className='get-started-form-container bg-white pt-12 h-full w-4/5 m-auto'>
-                    <h2 className='text-center pb-12'>Search Vehicles</h2>
-
-               
-            <form
-              target="_blank"
-              onSubmit={onSubmit}
-            //   action="https://formsubmit.co/38561154e40bcf2daceba311d90b4b24"
-              method="POST"
-            >
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="NAME"
-                {...register("name", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.name && (
-                <p className="ml-20 -mt-4 mb-4 text-red-500">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max Length is 100 characters "}
-                </p>
-              )}
-
-            <input
-                className={inputStyles}
-                type="text"
-                placeholder="PHONE NUMBER"
-                {...register("phone", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.phone && (
-                <p className="ml-20 -mt-4 mb-4 text-red-500">
-                  {errors.phone.type === "required" && "This field is required."}
-                  {errors.phone.type === "maxLength" &&
-                    "Max Length is 100 characters "}
-                </p>
-              )}
-
-            <input
-                className={inputStyles}
-                type="text"
-                placeholder="LOCATION"
-                {...register("location", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.location && (
-                <p className="ml-20 -mt-4 mb-4  text-red-500">
-                  {errors.location.type === "required" && "This field is required."}
-                  {errors.location.type === "maxLength" &&
-                    "Max Length is 100 characters "}
-                </p>
-              )}
-
-            <input
-                className={inputStyles}
-                type="text"
-                placeholder="TYPE OF CAR"
-                {...register("car", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.car && (
-                <p className="ml-20 -mt-4 mb-4 text-red-500">
-                  {errors.car.type === "required" && "This field is required."}
-                  {errors.car.type === "maxLength" &&
-                    "Max Length is 100 characters "}
-                </p>
-              )}
-
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="EMAIL"
-                {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                })}
-              />
-              {errors.email && (
-                <p className="ml-20 -mt-4 mb-4 text-red-500">
-                  {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address "}
-                </p>
-              )}
-              <textarea
-                className={inputStyles}
-                rows={4}
-                cols={50}
-                placeholder="ADDITIONAL DETAILS"
-                {...register("message", {
-                  required: true,
-                  maxLength: 2000,
-                })}
-              />
-              {errors.message && (
-                <p className="ml-20 -mt-4 mb-4 text-red-500">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max Length is 2000 characters "}
-                </p>
-              )}
-              <div className='flex justify-center items-center py-8'>
-              <button
-                type="submit"
-                className="mt-5 text-white rounded-md bg-[#00AFF5] px-20 py-3 transition duration-500 hover:text-white"
-              >
-                SUBMIT
-              </button>
-              </div>
-            </form>
-
-            </div>
-            </div>
-
-
-        </div>
-
-
-
-    </section>
-  )
+interface WhyUsPointsProps {
+	id: number;
+	title: string;
+	description: string;
 }
 
-export default GetStarted
+const WhyUsPointers: Array<WhyUsPointsProps> = [
+	{
+		id: 1,
+		title: "Earn while you rest.",
+		description:
+			"While you're away on a trip or tired of driving, your car can make you an extra income.",
+	},
+	{
+		id: 2,
+		title: "Security.",
+		description:
+			"Our customers are elite business people, plus they go through a thorough KYC process that guarantees the safety of your car.",
+	},
+	{
+		id: 3,
+		title: "Weekly payouts",
+		description:
+			"You'll receive your earnings at the end of each week — no need to wait around for payday.",
+	},
+];
+
+const GetStarted = () => {
+	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+	const inputStyles = `mb-5 w-3/4 flex justify-center items-center m-auto border border-2 border-gray-300 rounded-lg px-5 py-3 placeholder-grey`;
+	const {
+		register,
+		trigger,
+		formState: { errors },
+	} = useForm();
+	const onSubmit = async (e: any) => {
+		const isValid = await trigger();
+		if (!isValid) {
+			e.preventDefault();
+		}
+	};
+	return (
+		<section id="getstarted" className="getstarted mt-12 bg-[#F5F5F5]">
+			<div className="getstarted-wrapper basis-1/6 md:flex md:flex-row justify-center pt-5 pb-32">
+				<div className="get-started-content flex flex-col justify-center">
+					<div className="get-started-text py-10 md:py-8">
+						<h2>Earn money with RoRo</h2>
+						<p>
+							What is your vehicle doing at home? Earn an extra
+							income on your car instead of parking it.
+						</p>
+					</div>
+
+					{WhyUsPointers.map((points: WhyUsPointsProps) => (
+						<WhyUsPoints
+							key={points?.id}
+							title={points?.title}
+							description={points?.description}
+						/>
+					))}
+          
+					<div className="py-5"></div>
+
+					<Link to="/hire" className="home-btn">
+						Get started now
+					</Link>
+				</div>
+
+				<div className="get-started-form-wrapper ">
+					{isAboveMediumScreens && (
+						<div className="get-started-image">
+							<img
+								src={GetStartedImage}
+								className="w-[400px]"
+								alt="get-started"
+							/>
+						</div>
+					)}
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default GetStarted;
