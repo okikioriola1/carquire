@@ -69,7 +69,7 @@ const GetStarted = () => {
           
 					<div className="py-5"></div>
 
-					<Link to="/hire" className="home-btn">
+					<Link to="/lease" className="home-btn">
 						Get started now
 					</Link>
 				</div>

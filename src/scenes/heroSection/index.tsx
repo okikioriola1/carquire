@@ -31,10 +31,10 @@ const Hero = () => {
 						{/* <p> Get a car whenever you need it and for as long as you need it</p> */}
 					</div>
 					<div className="flex gap-10 mt-8">
-						<Link to="/rent" className="home-btn">
+						<Link to="/request" className="home-btn">
 							Make Request
 						</Link>
-						{/* <Link to="/hire" className="home-btn">
+						{/* <Link to="/lease" className="home-btn">
 							Drop A Car
 						</Link> */}
 
