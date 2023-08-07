@@ -47,3 +47,12 @@
     cursor: pointer;
 
 }
+
+@media (max-width:550px) {
+    .home-btn, .earn-btn{
+    width: 130px;
+    font-size: 12px;
+    padding:1rem;
+    text-align: center;
+    }
+}

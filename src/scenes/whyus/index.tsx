@@ -53,12 +53,12 @@ const WhyUs = () => {
 		<section id="whychooseus" className="py-14 whyus">
 			<div className="whyus-wrapper flex w-5/6 m-auto gap-8">
 				{isAboveMediumScreens && (
-					<div className="flex basis-4/6 justify-center md:justify-items-end">
+					<div className="flex basis-3/5 justify-center md:justify-items-end">
 						<img src={WhyUsCar} className="w-4/5" alt="home-img" />
 					</div>
 				)}
 
-				<div className="whyus-content">
+				<div className="whyus-content flex flex-col justify-center">
 					<div className="whyus-header my-6">
 						<h3>Why choose us.</h3>
 						{/* <h2>We offer the best experience with our deals</h2> */}

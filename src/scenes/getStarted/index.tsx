@@ -49,8 +49,8 @@ const GetStarted = () => {
 	};
 	return (
 		<section id="getstarted" className="getstarted mt-12 bg-[#F5F5F5]">
-			<div className="getstarted-wrapper basis-1/6 md:flex md:flex-row justify-center pt-5 pb-32">
-				<div className="get-started-content flex flex-col justify-center">
+			<div className="getstarted-wrapper justify-between w-4/5 m-auto md:flex md:flex-row pt-5 pb-32">
+				<div className="get-started-content basis-2/5 flex flex-col justify-center">
 					<div className="get-started-text py-10 md:py-8">
 						<h2>Earn money with RoRo</h2>
 						<p>
@@ -69,14 +69,14 @@ const GetStarted = () => {
           
 					<div className="py-5"></div>
 
-					<Link to="/hire" className="home-btn">
+					<Link to="/lease" className="home-btn">
 						Get started now
 					</Link>
 				</div>
 
-				<div className="get-started-form-wrapper ">
+				<div className="get-started-form-wrapper items-center flex  ">
 					{isAboveMediumScreens && (
-						<div className="get-started-image">
+						<div className="get-started-image ">
 							<img
 								src={GetStartedImage}
 								className="w-[400px]"

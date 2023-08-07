@@ -30,13 +30,11 @@ const Hero = () => {
 						</p>
 						{/* <p> Get a car whenever you need it and for as long as you need it</p> */}
 					</div>
-					<div className="flex gap-10 mt-8">
-						<Link to="/rent" className="home-btn">
+					<div className="flex flex-col xs:flex-row gap-10 mt-8">
+						<Link to="/request" className="home-btn">
 							Make Request
 						</Link>
-						{/* <Link to="/hire" className="home-btn">
-							Drop A Car
-						</Link> */}
+
 
 						<AnchorLink
 							href={`#getstarted`}

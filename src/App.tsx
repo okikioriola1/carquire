@@ -24,8 +24,8 @@ function App() {
 				/>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/rent" element={<Renter />} />
-					<Route path="/hire" element={<Hire />} />
+					<Route path="/request" element={<Renter />} />
+					<Route path="/lease" element={<Hire />} />
 				</Routes>
 			</div>
 		</>
